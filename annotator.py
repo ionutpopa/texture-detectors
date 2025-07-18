@@ -9,7 +9,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32").to(device)
 processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
 
-dataset_path = "fabrics_dataset/fabric/train"  # adjust if needed
+dataset_path = "fabrics_dataset/fabric/train" 
 
 material_weights = ["lightweight", "medium weight", "heavyweight"]
 finishes = ["matte", "shiny", "sheer", "textured", "smooth"]
