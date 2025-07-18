@@ -1,0 +1,11 @@
+              precision    recall  f1-score   support
+
+       matte      0.794     0.853     0.823      1383
+       sheer      0.857     0.684     0.761       367
+       shiny      0.619     0.693     0.654       101
+      smooth      0.805     0.860     0.832      1510
+    textured      0.836     0.689     0.755       819
+
+    accuracy                          0.805      4180
+   macro avg      0.782     0.756     0.765      4180
+weighted avg      0.808     0.805     0.803      4180
