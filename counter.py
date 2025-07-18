@@ -15,7 +15,7 @@ def display_counts(title, counter):
     print(df.to_string(index=False))
 
 def main():
-    json_path = "fabric_clip_annotations.json"  # Update if path differs
+    json_path = "fabric_clip_annotations.json"
     annotations = load_annotations(json_path)
     
     total_images = len(annotations)
