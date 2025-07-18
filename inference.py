@@ -10,7 +10,7 @@ import json
 class ResNetSingleClassifier(nn.Module):
     def __init__(self, num_classes):
         super().__init__()
-        base = models.resnet50(pretrained=False)
+        base = models.resnet50(weights=models.ResNet50_Weights.DEFAULT)
         in_features = base.fc.in_features
         base.fc = nn.Sequential(
             nn.Dropout(0.5),
