@@ -9,7 +9,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32").to(device)
 processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
 
-dataset_path = "/content/fabrics_dataset/fabric/train"  # adjust if needed
+dataset_path = "fabrics_dataset/fabric/train"  # adjust if needed
 
 material_weights = ["lightweight", "medium weight", "heavyweight"]
 finishes = ["matte", "shiny", "sheer", "textured", "smooth"]
@@ -64,7 +64,7 @@ for fabric_class in tqdm(os.listdir(dataset_path), desc="Processing classes"):
         except Exception as e:
             print(f"Error processing {image_path}: {e}")
 
-output_file = "/content/fabric_clip_annotations.json"
+output_file = "fabric_clip_annotations.json"
 with open(output_file, "w") as f:
     json.dump(annotations, f, indent=2)
 
